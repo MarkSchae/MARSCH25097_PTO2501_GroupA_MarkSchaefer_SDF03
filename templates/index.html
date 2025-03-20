@@ -7,6 +7,62 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
+    <header>
+        {% comment %}This is where the profile pic and profile infor will go{% endcomment %}
+        <div class="container">
+
+            <div class="profile">
+
+                <div class="profile-image">
+                    <img src="#" alt="#">
+                </div>
+
+                <div class="user-info">
+                    <div class="profile-stats">
+                        <ul>
+                            <li class="profile-posts"><span>#</span>Posts</li>
+                            <li class="profile-followers"><span>#</span>Followers</li>
+                            <li class="profile-following"><span>#</span>Following</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        
+    </header>
+
+    <main>
+        {% comment %}This is where the photo gallery will go{% endcomment %}
+        {% comment %}
+        Div container for everythin
+            Div for photos page
+                Div for individual photo
+                    Div/span for photo information/likes/comments  
+        {% endcomment %}
+
+        {% comment %} First photo in the photo page{% endcomment %}
+        <div class="container">
+
+            <div class="photo-page">
+                <div class="photo">
+                    <img src="#" alt="#">
+                </div>
+
+                <div class="photo-info">
+                    <ul>
+                        <li class="photo-likes"><span class="hide">Likes:</span>#</li>
+                        <li class="photo-comments"><span class="hide">Comments:</span>#</li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
 </body>
 </html>

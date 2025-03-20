@@ -16,4 +16,6 @@ POA:
 
 3: Set up the grid for the photo gallery and try to make it look like the reference 
 
-4: TBC 
+4: Research how the font awesome icons work and implement them 
+
+5: TBC 
