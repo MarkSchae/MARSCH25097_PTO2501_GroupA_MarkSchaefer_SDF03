@@ -1,0 +1,19 @@
+Create seperate sections in the html for the logo and intro (header)
+Seperate section for the photo grid (main), I do not think I will need seperate sections 
+
+I am still comtemplating using flexbox for the header section and grid for the photo gallery or just using grid primarily for both sections 
+Must add a pic of Po 
+Add some personal touches such as being able to click on the like/follow button and it changes color, obviously cant save the liked photo to a database yet so it will be removed on page reload
+I like animations, maybe find a way to integrate without changing the layout too much, maybe a seperate page 
+The hover before and after pseudo affects can be made to look very impressive, work on that 
+Do some research on what Instagram looks like and the dimensions, how they choose to lay their site out for responsiveness
+
+POA:
+
+1: Initial set up - just boiler plate folders and files 
+
+2: Initial set up of the html structure for the page 
+
+3: Set up the grid for the photo gallery and try to make it look like the reference 
+
+4: TBC 
