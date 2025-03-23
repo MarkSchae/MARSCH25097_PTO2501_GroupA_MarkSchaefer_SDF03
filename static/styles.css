@@ -1,3 +1,32 @@
+:root {
+    /* I used chat gpt here, I thought that the code is very tedious once you know what to write and the sizes are set to what it would consider industry standard which eliminates time I would have to spend on trial and error*/
+    /* Base font size */
+    font-size: 10px; /* Root font size (1rem = 10px) */
+    
+    /* Responsive font sizes using clamp() */
+    --font-size-paragraph: clamp(0.8rem, calc(0.8rem + (2 * (100vw - 320px)) / 220), 1rem); /* Paragraph text */
+    --font-size-small: clamp(0.75rem, calc(0.75rem + (0.25 * (100vw - 320px)) / 220), 0.875rem); /* Small text (footnotes, captions) */
+    --font-size-h1: clamp(2rem, calc(2rem + (1 * (100vw - 320px)) / 220), 3rem); /* Main heading (H1) */
+    --font-size-h2: clamp(1.75rem, calc(1.75rem + (0.75 * (100vw - 320px)) / 220), 2.5rem); /* Subheading (H2) */
+    --font-size-h3: clamp(1.5rem, calc(1.5rem + (0.5 * (100vw - 320px)) / 220), 2rem); /* Sub-subheading (H3) */
+    --font-size-h4: clamp(1.25rem, calc(1.25rem + (0.25 * (100vw - 320px)) / 220), 1.75rem); /* Smaller headings (H4) */
+    --font-size-h5: clamp(1.125rem, calc(1.125rem + (0.25 * (100vw - 320px)) / 220), 1.5rem); /* Even smaller headings (H5) */
+    --font-size-h6: clamp(1rem, calc(1rem + (0.25 * (100vw - 320px)) / 220), 1.25rem); /* Smallest headings (H6) */
+    --font-size-lead: clamp(1.125rem, calc(1.125rem + (0.25 * (100vw - 320px)) / 220), 1.375rem); /* Introductory paragraph (lead) */
+    
+    /* Optional: Line heights for readability */
+    --line-height-body: 1.6;
+    --line-height-headings: 1.4;
+  }
+
+p, span, li {
+    font-size: var(--font-size-paragraph);
+}
+
+h1 {
+    font-size: var(--font-size-h1);
+}
+
 html, body {
     width: 100%;
     height: 100%;
@@ -5,7 +34,7 @@ html, body {
 }
 
 html {
-    overflow: scroll;
+    overflow: hidden;
 }
 
 /*Grid for the main section with the photo gallery*/
@@ -46,26 +75,47 @@ html {
 
 /*Grid for the header section with the profile information*/
 /*Two columns and one row for the header elements*/
-.profile-container {
+.profile-grid-container {
     background-color: bisque;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(1, 1fr);
     max-width: 540px;
     margin-left: auto;
     margin-right: auto;
-    gap: 0.5em; 
+    gap: 1.5em; 
     padding: 20px 0px;
 }
 
-/*Profile information layout*/
+/*Profile information layout excluding the profile img*/
 .profile {
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
+    grid-column: 2 / 4;
+    align-items: start;
+    overflow: hidden;
+    width: 100%;  
+}
+
+.profile > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
+    width: 100%;
+}
+
+.profile-image {
+    background-color: blue;
+    width: 100%;
+    border: solid green var(--font-size-paragraph);
+    border-radius: 10em;
+    overflow: hidden;
+    aspect-ratio: 1 / 1;
 }
 
 .profile-image img {
-    border: solid green 10px;
-    border-radius: 200px;
+    object-fit: cover;
+    width: 100%;
 }
-
