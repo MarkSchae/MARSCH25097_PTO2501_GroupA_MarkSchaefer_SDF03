@@ -133,6 +133,10 @@ html {
     width: 100%;
 }
 
+.profile > div:nth-child(3) {
+    justify-content: start;
+}
+
 .profile-image {
     width: 100%;
     border: solid green var(--font-size-paragraph);
@@ -146,7 +150,40 @@ html {
     width: 100%;
 }
 
-.loader {
+.loader-container {
     text-align: center;
+}
+
+.loader {
     font-size: var(--font-size-h1);
+    display: inline-block;
+    animation: buffer 1s ease-in-out 1s infinite normal;
+}
+
+@keyframes buffer {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.user-info-settings button {
+    font-size: var(--font-size-h6);
+    text-align: center;
+    align-self: end;
+}
+
+.user-info-settings h1 {
+    align-self: end;
+    margin: 0;
+}
+
+.btn-edit-profile-gear {
+    background: none;
+    display: inline-block;
+    border: 0;
+    padding: 0;
+    font-size: var(--font-size-h2) !important;
 }
