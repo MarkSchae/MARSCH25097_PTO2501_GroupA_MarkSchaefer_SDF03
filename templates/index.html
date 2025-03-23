@@ -23,7 +23,7 @@
                 <div class="user-info-settings">
                     <h1 class="user-name">Mark's pets</h1>
                     <button class="btn-edit-profile">Edit Profile</button>
-                    <button></button>
+                    <button>⚙️</button>
                 </div>
 
                 <div class="profile-stats">
@@ -237,10 +237,20 @@
 
         </div>
 
-        <div class="loader"></div>
+        <div class="loader">⏳</div>
 
     </main>
-
+    
+    <script>
+        // From here we can add id's or data-attributes and loop through each photo-card to provide a different number or a specific number from a database
+        function getRandomLikes() {
+          var randomNumber = Math.floor(Math.random() * 10);
+          document.documentElement.style.setProperty('--likes-comments', `"💗: ${randomNumber} 🗨️: ${randomNumber}"`);
+        }
+        // This is just a proof of concept placeholder 
+        //setInterval (getRandomLikes, 1000);
+      </script>
+      
 </body>
 
 </html>
